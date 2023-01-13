@@ -1,0 +1,107 @@
+---
+permalink: api-automation/concept-managing-fileshares-api.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用此处列出的API查看、添加和删除CIFS共享和NFS文件共享。使用这些API、您还可以为文件共享分配和修改性能服务级别和存储效率策略。 
+---
+= 管理文件共享
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用此处列出的API查看、添加和删除CIFS共享和NFS文件共享。使用这些API、您还可以为文件共享分配和修改性能服务级别和存储效率策略。
+
+在分配存储之前、必须已创建虚拟机并为其配置支持的协议。同样、要为文件共享分配存储效率策略、必须在创建文件共享之前创建存储效率策略。
+
+
+
+== 查看文件共享
+
+您可以使用以下方法查看Unified Manager环境中可用的所有存储工作负载。将 ONTAP 集群添加为 Active IQ Unified Manager 上的数据源后，这些集群的存储工作负载将自动添加到 Unified Manager 实例中。此API将自动检索手动添加到Unified Manager实例中的所有文件共享。您可以通过使用文件共享密钥运行此 API 来查看特定文件共享的详细信息。
+
+[cols="1a,1a,1a"]
+|===
+| 类别 | HTTP 动词 | 路径 
+
+
+ a| 
+存储提供程序
+ a| 
+获取
+ a| 
+`/storage-provider/file-shares`
+
+`+/storage-provider/file-shares/{key}+`
+
+|===
+
+
+== 添加文件共享
+
+您可以使用以下方法在 SVM 中添加 CIFS 和 NFS 文件共享。您必须输入要创建的文件共享的详细信息作为输入参数。您不能使用此API创建FlexGroup。
+
+[cols="1a,1a,1a"]
+|===
+| 类别 | HTTP 动词 | 路径 
+
+
+ a| 
+存储提供程序
+ a| 
+发布
+ a| 
+`/storage-provider/file-shares`
+
+|===
+[NOTE]
+====
+根据提供的是访问控制列表（ ACL ）参数还是导出策略参数，系统会创建 CIFS 共享或 NFS 文件共享。如果不提供 ACL 参数的值，则不会创建 CIFS 共享，并且默认情况下会创建 NFS 共享，以便可以访问所有。
+
+====
+
+
+== 删除文件共享
+
+您可以使用以下方法删除特定文件共享。要删除特定文件共享，您需要输入文件共享密钥作为输入参数。
+
+[cols="1a,1a,1a"]
+|===
+| 类别 | HTTP 动词 | 路径 
+
+
+ a| 
+存储提供程序
+ a| 
+删除
+ a| 
+`+/storage-provider/file-shares/{key}+`
+
+|===
+
+
+== 修改文件共享
+
+您可以使用以下方法修改文件共享并更新其属性。
+
+要修改特定的文件共享，您需要提供文件共享密钥。此外，您还需要输入要更新的属性及其值。
+
+[NOTE]
+====
+请注意，一次调用此 API 时只能更新一个属性。对于多个更新，您需要多次运行此 API 。
+
+====
+[cols="1a,1a,1a"]
+|===
+| 类别 | HTTP 动词 | 路径 
+
+
+ a| 
+存储提供程序
+ a| 
+patch
+ a| 
+`+/storage-provider/file-shares/{key}+`
+
+|===

@@ -1,0 +1,22 @@
+---
+permalink: reporting/concept-customizing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以通过多种方式自定义视图，以便创建一个报告，其中包含管理 ONTAP 集群所需的所有信息。 
+---
+= 自定义报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过多种方式自定义视图，以便创建一个报告，其中包含管理 ONTAP 集群所需的所有信息。
+
+从默认清单页面或自定义视图开始，然后通过添加或删除列，更改列顺序，筛选数据或按升序或降序对特定列进行排序来对其进行自定义。
+
+[NOTE]
+====
+您必须具有应用程序管理员或存储管理员角色才能管理报告。
+
+====

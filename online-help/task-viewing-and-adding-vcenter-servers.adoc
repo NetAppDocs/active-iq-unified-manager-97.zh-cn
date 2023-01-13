@@ -1,0 +1,78 @@
+---
+permalink: online-help/task-viewing-and-adding-vcenter-servers.html 
+sidebar: sidebar 
+keywords: vCenter server 
+summary: '要查看虚拟机(VM\)的性能并对其进行故障排除、必须在Active IQ Unified Manager 实例上添加关联的vCenter。' 
+---
+= 查看和添加vCenter服务器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要查看虚拟机(VM)的性能并对其进行故障排除、必须在Active IQ Unified Manager 实例上添加关联的vCenter。
+
+
+
+== 开始之前
+
+在添加或查看vCenter之前、请确保满足以下条件：
+
+* 您知道vCenter名称。
+* 可以访问vCenter以成功发现。
+* 添加vCenter时、您知道IP地址并具有凭据。凭据必须是vCenter管理员或对vCenter具有只读访问权限的root用户的凭据。
+* 要添加的vCenter运行vSphere 6.5或更高版本。
+* vCenter Server中的数据收集设置将设置为级别3、时间间隔为5分钟
+* vCenter中的延迟值以毫秒为单位进行配置、而不是以微秒为单位进行配置、以便成功计算延迟值。
+* vCenter的时间属于vCenter的时区。
+
+
+
+
+== 关于此任务
+
+对于添加和发现的每个vCenter、Unified Manager会收集配置数据、例如vCenter和ESXi服务器详细信息、ONTAP 映射、数据存储库详细信息以及托管的VM数量。它还会收集组件的性能指标。
+
+
+
+== 步骤
+
+. 转至* VMware *>* vCenter、*并检查您的vCenter是否位于列表中。
++
+[NOTE]
+====
+如果您的vCenter不可用、则必须添加此vCenter。
+
+====
++
+.. 单击 * 添加 * 。
+.. 为vCenter添加正确的IP地址、并确保设备可访问。
+.. 添加对vCenter具有只读访问权限的管理员或root用户的用户名和密码。
+.. 如果使用的端口不是默认端口、请添加自定义端口号 `443`。
+.. 单击 * 保存 * 。成功发现后，系统将显示一个服务器证书供您接受。
++
+接受此证书后、vCenter将添加到可用vCenter列表中。添加此设备不会收集关联 VM 的数据，并且此收集会按计划的时间间隔进行。
+
+
+
+. 如果您的vCenter位于* vCenter *页面上、请检查其状态。将鼠标悬停在*状态*字段上可显示vCenter是否按预期运行、或者是否存在警告或错误。
++
+[NOTE]
+====
+通过添加vCenter、您可以查看以下状态。但是、添加vCenter后、相应虚拟机的性能和延迟数据可能需要长达一小时才能准确反映出来。
+
+====
++
+** 绿色：正常、表示已发现vCenter、并且已成功收集性能指标
+** 黄色：警告(例如、未将vCenter Server的统计信息级别设置为3或更高以获取每个对象的统计信息)
+** 橙色：错误(表示任何内部错误、例如异常、配置数据收集失败或无法访问vCenter)您可以单击列显示图标(*显示/隐藏*)以查看vCenter状态的状态消息并对问题描述 进行故障排除。
+
+
+. 如果无法访问vCenter或凭据已更改、请编辑vCenter详细信息。选择vCenter、然后单击*编辑*。
+. 在 * 编辑 VMware vCenter Server* 页面上进行必要的更改。
+. 单击 * 保存 * 。
++
+成功发现后、vCenter的状态将发生变化。
+
+

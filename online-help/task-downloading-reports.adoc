@@ -1,0 +1,40 @@
+---
+permalink: online-help/task-downloading-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: '您可以下载报告并将数据以逗号分隔值\(CSV\)文件或PDF文件的形式保存到本地或网络驱动器。您可以使用Microsoft Excel等电子表格应用程序打开CSV文件、也可以使用Adobe Acrobat等读者打开PDF文件。' 
+---
+= 下载报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以下载报告并将数据以逗号分隔值(CSV)文件或PDF文件的形式保存到本地或网络驱动器。您可以使用Microsoft Excel等电子表格应用程序打开CSV文件、也可以使用Adobe Acrobat等读者打开PDF文件。
+
+
+
+== 步骤
+
+. 单击 image:../media/download-icon.gif[""] 要下载报告、请执行以下操作之一：
++
+[cols="1a,1a"]
+|===
+| 选择 | 至 ... 
+
+
+ a| 
+CSV
+ a| 
+将报告以逗号分隔值(CSV)文件的形式保存到本地或网络驱动器。
+
+
+
+ a| 
+PDF
+ a| 
+将报告以.pdf文件格式保存到本地或网络驱动器。
+
+|===
+

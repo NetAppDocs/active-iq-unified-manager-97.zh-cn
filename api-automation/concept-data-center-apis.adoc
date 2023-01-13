@@ -1,0 +1,191 @@
+---
+permalink: api-automation/concept-data-center-apis.html 
+sidebar: sidebar 
+keywords:  
+summary: 数据中心类别下的REST API提供有关集群、节点、聚合、卷、LUN、文件共享、命名空间以及数据中心中的其他元素。这些API可用于查询、添加、删除或修改数据中心中的配置。 
+---
+= 用于管理数据中心的API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下的REST API `datacenter` 类别提供了有关集群、节点、聚合、卷、LUN、文件共享、命名空间以及数据中心中的其他元素。这些API可用于查询、添加、删除或修改数据中心中的配置。
+
+其中大多数 API 都是 GET 调用，可提供跨集群聚合以及筛选，排序和分页支持。运行这些 API 时，它们会从数据库返回数据。因此，下一个采集周期需要发现新创建的对象，以便显示在响应中。
+
+如果要查询特定对象的详细信息，则需要输入该对象的唯一 ID 才能查看其详细信息。例如：
+
+[listing]
+----
+curl -X GET "https://<hostname>/api/datacenter/cluster/clusters/4c6bf721-2e3f-11e9-a3e2-00a0985badbb" -H "accept: application/json" -H "Authorization: Basic <Base64EncodedCredentials>"
+----
+[NOTE]
+====
+Swagger API 界面上提供了 cURL 命令，示例，请求和 API 响应。您可以按 Swagger 上指示的特定参数筛选结果并对结果进行排序。通过这些 API ，您可以筛选集群，卷或 Storage VM 等特定存储对象的结果。
+
+====
+[cols="1a,1a,4a"]
+|===
+| HTTP 动词 | 路径 | Description 
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/cluster/clusters`
+
+`/datacenter/cluster/clusters/{key}`
+ a| 
+您可以使用此方法查看整个数据中心的 ONTAP 集群的详细信息。
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/cluster/nodes`
+
+`/datacenter/cluster/nodes/{key}`
+ a| 
+您可以使用此方法查看数据中心中节点的详细信息。
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/protocols/cifs/shares`
+
+`/datacenter/protocols/cifs/shares/{key}`
+ a| 
+您可以使用此方法查看数据中心中 CIFS 共享的详细信息。
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/protocols/nfs/export-policies`
+
+`/datacenter/protocols/nfs/export-policies/{key}`
+ a| 
+您可以使用此方法查看受支持 NFS 服务的导出策略的详细信息。
+
+您可以查询集群或 Storage VM 的导出策略，并重复使用导出策略密钥来配置 NFS 文件共享。有关在工作负载上分配和重复使用导出策略的详细信息，请参见 "`配置 CIFS 和 NFS 文件共享` " 。
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/storage/aggregates`
+
+`/datacenter/storage/aggregates/{key}`
+ a| 
+您可以使用此方法查看整个数据中心中的聚合集合、以便在这些聚合上配置工作负载或进行监控。
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/storage/luns`
+
+`/datacenter/storage/luns/{key}`
+ a| 
+您可以使用此方法查看整个数据中心中的 LUN 集合。
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/storage/qos/policies`
+
+`/datacenter/storage/qos/policies/{key}`
+ a| 
+您可以使用此方法查看数据中心中所有QoS策略的详细信息、并根据需要应用这些策略。
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/storage/qtrees`
+
+`/datacenter/storage/qtrees/{key}`
+ a| 
+您可以使用此方法查看整个数据中心的qtree详细信息。
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/storage/volumes`
+
+`/datacenter/storage/volumes/{key}`
+ a| 
+您可以使用此方法查看数据中心中的卷集合。
+
+
+
+ a| 
+`GET`
+
+`POST`
+
+`DELETE`
+
+`PATCH`
+ a| 
+`/datacenter/protocols/san/igroups`
+
+`/datacenter/protocols/san/igroups/{key}`
+ a| 
+您可以分配有权访问特定 LUN 目标的启动程序组（ igroup ）。如果存在现有 igroup ，您可以对其进行分配。您也可以创建 igroup 并将其分配给 LUN 。
+
+您可以使用这些方法分别查询，创建，删除和修改 igroup 。
+
+需要注意的事项：
+
+* `POST`：创建igroup时、您可以指定要分配访问权限的Storage VM。
+* `DELETE`：要删除特定的igroup、您需要提供igroup键作为输入参数。如果已为 LUN 分配 igroup ，则无法删除该 igroup 。
+* `PATCH`：要修改特定的igroup、您需要提供igroup键作为输入参数。您还必须输入要更新的属性及其值。
+
+
+
+
+ a| 
+`GET`
+
+`POST`
+
+`DELETE`
+
+`PATCH`
+ a| 
+`/datacenter/svm/svms`
+
+`/datacenter/svm/svms/{key}`
+ a| 
+您可以使用这些方法查看，创建，删除和修改 Storage Virtual Machine （ Storage VM ）。
+
+需要注意的事项：
+
+* `POST`：必须输入要创建的Storage VM对象作为输入参数。您可以创建自定义 Storage VM ，然后为其分配所需属性。
++
+
+NOTE: 如果您已在环境中启用基于SLO的工作负载配置、则在创建Storage VM时、请确保它支持在其上配置LUN和文件共享所需的所有协议、例如SMB/CIFS、NFS、FCP、和iSCSI。如果 Storage VM 不支持所需的服务，则配置工作流可能会失败。建议同时在 Storage VM 上为相应类型的工作负载启用服务。
+
+* `DELETE`：要删除特定的Storage VM、您需要提供Storage VM密钥。
++
+
+NOTE: 如果您已在环境中启用基于 SLO 的工作负载配置，则无法删除已配置存储工作负载的 Storage VM 。删除已配置CIFS/SMB服务器的Storage VM时、此API还会删除CIFS/SMB服务器以及本地Active Directory配置。但是、CIFS/SMB服务器名称仍位于Active Directory配置中、您必须从Active Directory服务器手动删除此配置。
+
+* `PATCH`：要修改特定的Storage VM、您需要提供Storage VM密钥。您还需要输入要更新的属性及其值。
+
+
+|===

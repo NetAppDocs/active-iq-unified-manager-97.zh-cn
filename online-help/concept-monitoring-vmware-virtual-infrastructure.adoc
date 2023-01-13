@@ -1,0 +1,47 @@
+---
+permalink: online-help/concept-monitoring-vmware-virtual-infrastructure.html 
+sidebar: sidebar 
+keywords:  
+summary: 通过Active IQ Unified Manager 可以查看部署在数据存储库上的虚拟机、并可以监控虚拟环境中的存储和性能问题并对其进行故障排除。您可以使用此功能确定存储环境中的任何延迟问题、或者vCenter上是否报告了性能事件。 
+---
+= 监控 VMware 虚拟基础架构
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过Active IQ Unified Manager 可以查看部署在数据存储库上的虚拟机(VM)、并可以监控虚拟环境中的存储和性能问题并对其进行故障排除。您可以使用此功能确定存储环境中的任何延迟问题、或者vCenter上是否报告了性能事件。
+
+ONTAP 上的典型虚拟基础架构部署包含多个组件，这些组件分布在计算层，网络层和存储层上。VM 应用程序中的任何性能滞后都可能是由于各个层的各个组件同时面临的延迟造成的。如果存储和vCenter管理员以及IT人员需要分析虚拟环境中的性能问题描述 并了解问题描述 发生在哪个组件中、则此功能非常有用。
+
+Unified Manager 以拓扑视图形式呈现虚拟环境的底层子系统，用于确定计算节点，网络或存储是否发生延迟问题描述。此视图还会突出显示导致执行补救步骤和解决底层问题描述时出现性能滞后的特定对象。
+
+部署在ONTAP 存储上的虚拟基础架构包括以下对象：
+
+* 数据存储库：数据存储库是指连接到VM主机的虚拟存储对象。数据存储库是 ONTAP 的可管理存储实体，例如 LUN 或卷，用作日志文件，脚本，配置文件和虚拟磁盘等 VM 文件的存储库。它们通过 SAN 或 IP 网络连接连接到环境中的主机。Unified Manager不支持或不会显示映射到vCenter的ONTAP 外部数据存储库。
+* Host ：运行 ESXi ， VMware 的虚拟化软件并托管 VM 的物理或虚拟系统。
+* vCenter：一个集中式控制平台、用于管理虚拟环境中的VMware VM、ESXi主机和所有相关组件。有关vCenter的详细信息、请参见VMware文档。
+* 虚拟磁盘：主机上扩展名为VMDK的虚拟磁盘。虚拟磁盘中的数据存储在相应的 VMDK 上。
+* VM ： VMware 虚拟机。
+* vmdk ：数据存储库上为虚拟磁盘提供存储空间的虚拟机磁盘。每个虚拟磁盘都有一个相应的 VMDK 。
+
+
+这些对象在 VM 拓扑视图中表示。
+
+* 基于 ONTAP 的 VMware 虚拟化 * image:../media/vm-deployment.gif[""]
+
+* 用户工作流 *
+
+下图显示了使用 VM 拓扑视图的典型用例：
+
+image::../media/vm-workflow.gif[VM 工作流]
+
+
+
+== 未解决的问题
+
+* Unified Manager不支持ONTAP 外部并映射到vCenter实例的数据存储库。也不支持在这些数据存储库上具有虚拟磁盘的任何 VM 。
+* 仅支持将NAS和SAN卷用作数据存储库、不支持虚拟卷(VVol)。
+* 通过这些视图、您无法生成报告来分析各个组件的性能
+

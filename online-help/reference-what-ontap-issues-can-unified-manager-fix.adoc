@@ -1,0 +1,63 @@
+---
+permalink: online-help/reference-what-ontap-issues-can-unified-manager-fix.html 
+sidebar: sidebar 
+keywords: fix it 
+summary: '下表介绍了Unified Manager可通过单击"修复"按钮直接从Unified Manager用户界面解决的ONTAP 问题。' 
+---
+= Unified Manager可以修复哪些ONTAP 问题
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下表介绍了Unified Manager可通过单击*修复它*按钮直接从Unified Manager用户界面解决的ONTAP 问题。
+
+[cols="1a,1a,1a"]
+|===
+| 事件名称和问题描述 | 管理操作 | "`修复`"操作 
+
+
+ a| 
+卷空间已满
+
+指示卷空间几乎用尽、并且已违反容量全满阈值。默认情况下，此阈值设置为卷大小的 90% 。
+ a| 
+启用卷自动增长
+ a| 
+Unified Manager会确定没有为此卷配置卷自动增长、因此它会启用此功能、以便根据已用空间量增加或缩减卷大小。
+
+
+
+ a| 
+选项 Cf.takeover.on_panic 已配置为 off
+
+nodeshell选项"`cf.takeover.on_panic`"设置为*关*、这可能会在已配置HA的系统上发生原因 问题描述。
+ a| 
+启用崩溃时接管
+ a| 
+Unified Manager 会向集群发送相应的命令，将此设置更改为 * 开 * 。
+
+
+
+ a| 
+禁用 nodeshell 选项 snapmirror.enable
+
+旧的nodeshell选项`snapmirror.enable`设置为*开*、升级到ONTAP 9.3或更高版本后、该选项可能会在启动期间对问题描述 进行发生原因 处理。
+ a| 
+将 snapmirror.enable 选项设置为 off
+ a| 
+Unified Manager 会向集群发送相应的命令，将此设置更改为 * 关闭 * 。
+
+
+
+ a| 
+已启用 Telnet
+
+表示可能存在安全问题描述，因为 Telnet 不安全，并以未加密方式传递数据。
+ a| 
+禁用 Telnet
+ a| 
+Unified Manager会向集群发送以下命令以禁用Telnet： `security protocol modify -application telnet -enabled false`
+
+|===

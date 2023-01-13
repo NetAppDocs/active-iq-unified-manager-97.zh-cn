@@ -1,0 +1,18 @@
+---
+permalink: api-automation/reference-upgrading-qos-to-aqos.html 
+sidebar: sidebar 
+keywords: Upgrading 
+summary: 'Active IQ Unified Manager 支持与Unified Manager管理的存储工作负载关联的传统QoS和自适应QoS (AQO)。' 
+---
+= 修改工作负载以将 QoS 升级到 AQoS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager 支持与Unified Manager管理的存储工作负载关联的传统QoS和自适应QoS (AQoS)。
+
+如果将ONTAP 集群从9.1升级到9.3 (对于文件共享)和9.4 (对于LUN)、则可以将Unified Manager管理的相应工作负载的传统QoS升级到AQO。有关详细信息，请参见
+
+https://kb.netapp.com/app/answers/answer_view/a_id/1087379["如何在集群升级后将Unified Manager管理的工作负载从传统QoS升级到AQO"]

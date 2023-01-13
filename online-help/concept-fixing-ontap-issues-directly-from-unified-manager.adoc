@@ -1,0 +1,20 @@
+---
+permalink: online-help/concept-fixing-ontap-issues-directly-from-unified-manager.html 
+sidebar: sidebar 
+keywords: fix it 
+summary: 从Unified Manager 9.7开始、您可以直接从Unified Manager用户界面修复某些ONTAP 问题、而无需使用ONTAP System Manager或ONTAP 命令行界面。 
+---
+= 直接从 Unified Manager 修复 ONTAP 问题
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+从Unified Manager 9.7开始、您可以直接从Unified Manager用户界面修复某些ONTAP 问题、而无需使用ONTAP System Manager或ONTAP 命令行界面。
+
+一项称为"`M管理操作`"的新功能可为触发Unified Manager事件的许多ONTAP 问题提供修复。您可以从信息板、事件详细信息页面以及左侧导航菜单上的工作负载分析选项中访问管理操作。
+
+Unified Manager 可以全面诊断某些问题并提供单一解决方案。如果存在这些解决方法，这些解决方法将显示在管理操作中，并显示一个 * 修复它 * 按钮。单击 * 修复它 * 按钮以修复问题描述。
+
+Unified Manager 会向集群发送 ONTAP 命令以执行请求的修复。修复完成后，此事件将被废弃。
