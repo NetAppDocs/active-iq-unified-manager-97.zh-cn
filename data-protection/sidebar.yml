@@ -36,7 +36,7 @@ entries:
     - title: 通过卷 / 运行状况详细信息页面反转保护关系
       url: "/data-protection/task-reversing-protection-relationships-from-the-health-volume-details-page.html"
     - title: 从卷 / 运行状况详细信息页面中删除保护关系
-      url: "/data-protection/.html"
+      url: "/data-protection/task-removing-a-protection-relationship-from-the-health-volume-details-page.html"
     - title: 通过卷 / 运行状况详细信息页面重新同步保护关系
       url: "/data-protection/task-resynchronizing-protection-relationships-from-the-health-volume-details-page.html"
   - title: 解决保护作业故障
