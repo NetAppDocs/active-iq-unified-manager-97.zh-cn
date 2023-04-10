@@ -21,7 +21,7 @@ summary: 要使用 Unified Manager 和 OnCommand Workflow Automation 设置 Snap
 * 您必须已在两个集群或两个 Storage Virtual Machine （ SVM ）之间建立对等关系。
 * OnCommand Workflow Automation 必须与 Unified Manager 集成：
 +
-** link:task-configuring-a-connection-between-workflow-automation-and-unified-manager.adoc["设置 OnCommand Workflow Automation"]
+** link:task-configuring-a-connection-between-workflow-automation-and-unified-manager.html["设置 OnCommand Workflow Automation"]
 ** xref:task-verifying-unified-manager-data-source-caching-in-workflow-automation.adoc[在 Workflow Automation 中验证 Unified Manager 数据源缓存]
 
 
@@ -34,7 +34,7 @@ summary: 要使用 Unified Manager 和 OnCommand Workflow Automation 设置 Snap
 . 根据要创建的保护关系类型，执行以下操作之一：
 +
 ** xref:task-creating-a-snapmirror-protection-relationship-from-the-health-volume-details-page.adoc[创建 SnapMirror 保护关系]。
-** link:task-creating-a-snapvault-protection-relationship-from-the-health-volume-details-page.adoc["创建 SnapVault 保护关系"]。
+** link:task-creating-a-snapvault-protection-relationship-from-the-health-volume-details-page.html["创建 SnapVault 保护关系"]。
 
 
 . 如果要为此关系创建策略，请根据要创建的关系类型执行以下操作之一：

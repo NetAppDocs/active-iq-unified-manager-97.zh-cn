@@ -74,7 +74,7 @@ Unified Manager在Linux系统上的安装可以由root用户执行、也可以�
 如果您的系统上未配置 EPEL 存储库，则必须手动下载并配置该存储库。
 
 +
-link:task-manually-configuring-the-epel-repository.adoc["手动配置 EPEL 存储库"]
+link:task-manually-configuring-the-epel-repository.html["手动配置 EPEL 存储库"]
 
 * 如果未安装正确版本的 MySQL ，则必须启用 MySQL 存储库才能在系统上成功安装 MySQL 软件。
 +

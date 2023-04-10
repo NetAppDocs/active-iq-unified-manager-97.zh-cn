@@ -18,7 +18,7 @@ summary: 基于 VMware vSphere 平台的 Unified Manager 快速入门指南。
 * 可用磁盘空间： 5 GB （精简配置）， 152 GB （厚配置）
 
 
-有关详细的系统要求，请参见 link:./install-vapp/concept-requirements-for-installing-unified-manager.html["Unified Manager 的安装要求"] 和 link:http://mysupport.netapp.com/matrix["互操作性表"]。
+有关详细的系统要求，请参见 link:concept-requirements-for-installing-unified-manager.html["Unified Manager 的安装要求"] 和 link:http://mysupport.netapp.com/matrix["互操作性表"]。
 
 
 

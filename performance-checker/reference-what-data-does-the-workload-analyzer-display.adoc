@@ -43,7 +43,7 @@ LUN 的工作负载图表提供的统计信息级别与卷的工作负载图表�
 +
 ** *延迟*显示工作负载的延迟。此图表包含三个视图、可用于查看总延迟、按读取、写入和其他进程细分的延迟以及按集群组件细分的延迟。
 +
-请参见 link:concept-cluster-components-and-why-they-can-be-in-contention.adoc["集群组件及其可能发生争用的原因"] 此处显示的集群组件的问题描述。
+请参见 link:concept-cluster-components-and-why-they-can-be-in-contention.html["集群组件及其可能发生争用的原因"] 此处显示的集群组件的问题描述。
 
 ** *吞吐量*可显示工作负载的IOPS和MB/秒吞吐量。此图表包含两个视图、可用于查看总吞吐量以及按读取、写入和其他进程细分的吞吐量。
 +

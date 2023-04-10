@@ -17,7 +17,7 @@ summary: 基于 Linux 平台的 Unified Manager 快速入门指南。
 * 可用磁盘空间：中的100 GB磁盘空间 `/opt/netapp/data` 目录、根分区中50 GB。用于单独安装 `/opt` 和 `/var/log` 目录、请确保 `/opt` 具有15 GB、 `/var/log` 具有16 GB、和 `/tmp` 具有10 GB的可用空间。
 
 
-有关详细的系统要求以及在安全站点中安装产品的信息，请参见 link:./install-linux/concept-requirements-for-installing-unified-manager.html["Unified Manager 的安装要求"] 和 link:http://mysupport.netapp.com/matrix["互操作性表"]。
+有关详细的系统要求以及在安全站点中安装产品的信息，请参见 link:concept-requirements-for-installing-unified-manager.html["Unified Manager 的安装要求"] 和 link:http://mysupport.netapp.com/matrix["互操作性表"]。
 
 
 

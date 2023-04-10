@@ -27,7 +27,7 @@ summary: '信息板页面包含一些 " 面板 " ，用于显示所监控集群�
 Unified Manager 可以全面诊断某些问题并提供单一解决方案。如果可用、这些解决方法将显示在此面板中、并显示一个*修复它*按钮。您可以直接从 Unified Manager 修复这些问题，而不必使用 ONTAP 系统管理器或 ONTAP 命令行界面。
 
 +
-请参见 link:concept-fixing-ontap-issues-directly-from-unified-manager.adoc["直接从 Unified Manager 修复 ONTAP 问题"] 有关详细信息 ...
+请参见 link:concept-fixing-ontap-issues-directly-from-unified-manager.html["直接从 Unified Manager 修复 ONTAP 问题"] 有关详细信息 ...
 
 * * 容量面板 *
 +

@@ -56,7 +56,7 @@ vCenter服务器允许使用特殊字符(例如%、&、*、$、#、@、！、\�
 . 单击虚拟机旁边的向下箭头可查看计算层，网络层和存储层中各个组件的拓扑摘要视图。此时将突出显示存在延迟问题的节点。摘要视图显示组件的最差延迟。例如，如果一个虚拟机具有多个虚拟磁盘，则此视图将显示所有虚拟磁盘中延迟最差的虚拟磁盘。
 . 要分析数据存储库在一段时间内的延迟和吞吐量，请单击数据存储库对象图标顶部的 * 工作负载分析器 * 按钮。您可以转到工作负载分析页面，在此可以选择时间范围并查看数据存储库的性能图表。有关工作负载分析器的详细信息，请参见 _Troubleshooting Workloads Using the Workload analyzer 。
 +
-link:concept-troubleshooting-workloads-using-the-workload-analyzer.adoc["使用工作负载分析器对工作负载进行故障排除"]
+link:concept-troubleshooting-workloads-using-the-workload-analyzer.html["使用工作负载分析器对工作负载进行故障排除"]
 
 
 

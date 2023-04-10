@@ -42,7 +42,7 @@ summary: 所有工作负载视图显示数据中心集群上所有可用工作�
 
 您还可以通过此页面查看工作负载的性能详细信息。您可以通过单击 * 选择 / 排序列 * 按钮并选择要查看的特定列来查看有关工作负载的 IOPS ，容量和延迟的详细信息。" 性能视图 " 列显示工作负载的平均 IOPS 和峰值 IOPS ，您可以单击工作负载分析器图标以查看详细的 IOPS 分析。"IOPS 分析 " 弹出窗口中的 * 分析工作负载 * 按钮将转到 " 工作负载分析 " 页面，在此可以选择一个时间范围并查看选定工作负载的延迟，吞吐量和容量趋势。有关工作负载分析器的详细信息，请参见 _Troubleshooting Workloads Using the Workload analyzer
 
-link:concept-troubleshooting-workloads-using-the-workload-analyzer.adoc["使用工作负载分析器对工作负载进行故障排除"]
+link:concept-troubleshooting-workloads-using-the-workload-analyzer.html["使用工作负载分析器对工作负载进行故障排除"]
 
 
 

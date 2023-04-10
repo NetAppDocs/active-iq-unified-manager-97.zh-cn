@@ -29,7 +29,7 @@ Unified Manager 在 64 位 Windows 操作系统上支持以下语言：
 * 可用磁盘空间： 100 GB 磁盘空间用于安装目录， 50 GB 磁盘空间用于 MySQL 数据目录
 
 
-有关详细的系统要求，请参见 link:./install-windows/concept-requirements-for-installing-unified-manager.html["Unified Manager 的安装要求"] 和 link:http://mysupport.netapp.com/matrix["互操作性表"]。
+有关详细的系统要求，请参见 link:concept-requirements-for-installing-unified-manager.html["Unified Manager 的安装要求"] 和 link:http://mysupport.netapp.com/matrix["互操作性表"]。
 
 
 
@@ -47,7 +47,7 @@ Unified Manager 在 64 位 Windows 操作系统上支持以下语言：
 
 === 安装 Unified Manager
 
-要安装 Unified Manager ，请确保已安装 Microsoft .NET 4.5.2 或更高版本。在安装过程中， Unified Manager 会根据需要安装其他第三方软件包。有关相关软件包的详细信息，请参见 link:./install-windows/reference-windows-software-and-installation-requirements.html["Windows 软件和安装要求"]。
+要安装 Unified Manager ，请确保已安装 Microsoft .NET 4.5.2 或更高版本。在安装过程中， Unified Manager 会根据需要安装其他第三方软件包。有关相关软件包的详细信息，请参见 link:reference-windows-software-and-installation-requirements.html["Windows 软件和安装要求"]。
 
 . 使用默认本地管理员帐户登录到 Windows 。
 . 在下载安装文件的目录中，右键单击并以管理员身份运行 Unified Manager 可执行文件（ .exe ）。
